@@ -20,24 +20,24 @@ def saludo(request):
 
     fecha_actual= datetime.datetime.now()
 
-    # doc_externo = open("C:/Users/jorge/Desktop/proyecto1/proyecto1/template/template1.html")
-
-    # plt = Template(doc_externo.read())
-    
-    # doc_externo.close()
-    
-    # doc_externo = get_template('template1.html')
-    
-    # documento = doc_externo.render({
-    #     "nombre_persona": p1.nombre,
-    #     "apellido_persona": p1.apellido,
-    #     "fecha_actual": fecha_actual,
-    #     "numeros": numeros  
-    # })
-
+   
     return render(request, "template1.html", {
         "nombre_persona": p1.nombre,
         "apellido_persona": p1.apellido,
         "fecha_actual": fecha_actual,
         "numeros": numeros  
     })
+    
+def contenido(request):
+    
+    fecha_actual= datetime.datetime.now()
+    
+    return render(request, "contenido.html", {
+         "fecha_actual": fecha_actual  
+    })
+    
+def contenido2(request):
+    
+  
+    
+    return render(request, "contenido2.html")
